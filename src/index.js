@@ -8,11 +8,8 @@ app.set('port', 3000);
 app.set('views', path.join(__dirname, '/views/'));
 app.set('view engine', 'ejs');
 
-
 // Routes
-app.get('/', (req, res) => {
-    res.render('index');
-})
+app.use(require('./routes/index'));
 
 
 // Server
